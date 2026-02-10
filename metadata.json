@@ -1,0 +1,8 @@
+{
+  "name": "農易訂 AI 智慧叫貨系統 (Agri-Order AI)",
+  "description": "整合 AI 對話式叫貨、身份綁定、異常偵測、權限報價與自動化報表的智慧 LINE OA 解決方案。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
