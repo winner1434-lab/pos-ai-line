@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 農易訂 AI 智慧叫貨系統 (Agri-Order AI)
 
-This contains everything you need to run your app locally.
+這是一個專為 LINE OA 設計的 AI 智慧叫貨系統前端示範頁面。
 
-View your app in AI Studio: https://ai.studio/apps/drive/1QkUorWhGG4-0uChwScXOoM8C8uEwq0lp
+## 功能特點
+- **AI 對話式叫貨**：使用 Gemini API 解析自然語言意圖。
+- **異常偵測**：自動計算訂單變動率並提醒。
+- **身分綁定**：模擬 LIFF 的身分驗證流程。
+- **權限查價**：基於角色的價格查詢功能。
 
-## Run Locally
+## 部署說明 (Netlify)
 
-**Prerequisites:**  Node.js
+1. 將此專案推播至 GitHub。
+2. 在 Netlify 連結專案。
+3. **設定環境變數**：
+   - 進入 `Site Settings` > `Build & deploy` > `Environment variables`。
+   - 新增 `API_KEY`：您的 Google Gemini API Key。
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 技術棧
+- React (ESM via esm.sh)
+- Tailwind CSS
+- Google Gemini API
+- Recharts (數據視覺化)

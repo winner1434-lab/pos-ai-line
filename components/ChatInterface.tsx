@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { UserProfile, UserRole } from '../types';
-import { processUserMessage } from '../services/geminiService';
-import { MOCK_PRODUCTS, VARIANCE_THRESHOLD } from '../constants';
+import { UserProfile, UserRole } from '../types.ts';
+import { processUserMessage } from '../services/geminiService.ts';
+import { MOCK_PRODUCTS, VARIANCE_THRESHOLD } from '../constants.tsx';
 
 interface Message {
   id: string;

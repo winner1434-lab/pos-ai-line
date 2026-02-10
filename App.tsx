@@ -1,12 +1,12 @@
 
 import React, { useState, useCallback } from 'react';
-import { Layout } from './components/Layout';
-import { ChatInterface } from './components/ChatInterface';
-import { BindingForm } from './components/BindingForm';
-import { ReportDashboard } from './components/ReportDashboard';
-import { PriceQuery } from './components/PriceQuery';
-import { AppTab, UserProfile, UserRole } from './types';
-import { INITIAL_USER } from './constants';
+import { Layout } from './components/Layout.tsx';
+import { ChatInterface } from './components/ChatInterface.tsx';
+import { BindingForm } from './components/BindingForm.tsx';
+import { ReportDashboard } from './components/ReportDashboard.tsx';
+import { PriceQuery } from './components/PriceQuery.tsx';
+import { AppTab, UserProfile, UserRole } from './types.ts';
+import { INITIAL_USER } from './constants.tsx';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<AppTab>(AppTab.CHAT);

@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import { MOCK_PRODUCTS } from "../constants";
+import { MOCK_PRODUCTS } from "../constants.tsx";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
