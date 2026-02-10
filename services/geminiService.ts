@@ -2,9 +2,19 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { MOCK_PRODUCTS } from "../constants.tsx";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export async function processUserMessage(message: string, userRole: string) {
+  const apiKey = process.env.API_KEY;
+  
+  if (!apiKey) {
+    return {
+      intent: '系統提示',
+      reply: '抱歉，系統尚未設定 API 金鑰，請先在 Netlify 的環境變數中設定 API_KEY。',
+      extractedOrder: []
+    };
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
+
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: message,
